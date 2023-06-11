@@ -6,6 +6,8 @@ WORKDIR /var/www/html
 
 # Mod Rewrite
 RUN a2enmod rewrite
+RUN a2enmod proxy
+RUN a2enmod proxy_http
 
 # Linux Library
 RUN apt-get update && apt-get install -y \
